@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato Restaurants</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Zomato Restaurants</h1>
+        <div class="search-by-id">
+            <h3>Search by Country</h3>
+            <select id="restaurantCountryInput" placeholder="Enter Country Name"> 
+                <option value="Australia">Australia</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Canada">Canada</option>
+                <option value="India">India</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="New Zealand">New Zealand</option>
+                <option value="Phillipines">Phillipines</option>
+                <option value="Qatar">Qatar</option>
+                <option value="Singapore">Singapore</option>
+                <option value="South Africa">South Africa</option>
+                <option value="Sri Lanka">Sri Lanka</option>
+                <option value="Turkey">Turkey</option>
+                <option value="UAE">UAE</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="United States">United States</option>
+                <option value="">Select Country</option>
+            </select>
+            <button onclick="getRestaurantByCountry()">Search</button>
+            <div id="restaurantDetails"></div>
+        </div>
+        <div class="restaurant-list">
+            <h2>Restaurant List</h2>
+            <div id="restaurantList"></div>
+
+            <div class="pagination">
+                <button onclick="previousPage()">Previous</button>
+                <span id="pageInfo"></span>
+                <button onclick="nextPage()">Next</button>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+    <script>getRestaurantList(currentPage);</script>
+</body>
+</html>
